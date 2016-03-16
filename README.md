@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/angular2-tabs.svg)](https://badge.fury.io/js/angular2-tabs)
-
+[![Build Status](https://travis-ci.org/DemgelOpenSource/angular2-tabs.svg?branch=master)](https://travis-ci.org/DemgelOpenSource/angular2-tabs)
 # Angular2-Tabs
 
 Simple to use Tab option for Angular2
@@ -45,3 +45,9 @@ The default tab to be displayed. The last default tab that can be displayed (usi
 ### Explanation (Controller)
 #### Tab Object
 In this case `tabOne` is used to be pass information to the first tab. Property `title` is the title of the tab, and will be displayed in the tabList. The `canActivate` property is a function used to determine if a tab can be displayed.
+## CSS
+You will need to customize the list using your own CSS. The list will recieve either `an-tablist` or a custom class name defined with `anListClass`.
+### an-active / an-inactive
+These classes are added to the `li`.
+### an-canactivate / an-cantactivate
+These classes are added to the `li` based on if the tab can be activated based on the `canActivate` function passed in.
