@@ -1,0 +1,7 @@
+.vscode/
+typings
+ts/
+tsconfig.json
+typings.json
+.npmignore
+angular2-nav-*.tgz

@@ -1,0 +1,7 @@
+node_modules/
+.vscode/
+typings
+*.js
+*.d.ts
+./src/
+angular2-nav-*.tgz

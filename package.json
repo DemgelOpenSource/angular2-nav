@@ -1,0 +1,17 @@
+{
+  "name": "angular2-nav",
+  "version": "0.0.1",
+  "description": "Navigation for angular2",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "navigation",
+    "angular2"
+  ],
+  "author": "tenowg",
+  "license": "MIT",
+  "peerDependencies": {
+      "angular2": "*"
+  }
+}
