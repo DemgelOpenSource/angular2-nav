@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/angular2-nav.svg)](https://badge.fury.io/js/angular2-nav)
+[![npm version](https://badge.fury.io/js/angular2-tabs.svg)](https://badge.fury.io/js/angular2-tabs)
 
 # Angular2-Tabs
 
