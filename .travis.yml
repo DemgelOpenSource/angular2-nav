@@ -12,5 +12,6 @@ script:
 deploy:
   provider: npm
   api_key: NODE_API
+  email: "tenowg@gmail.com"
   on:
     tags: true
