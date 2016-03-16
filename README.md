@@ -1,8 +1,8 @@
 [![npm version](https://badge.fury.io/js/angular2-nav.svg)](https://badge.fury.io/js/angular2-nav)
 
-# Angular2-Nav
+# Angular2-Tabs
 
-Simple to use Navigation option for Angular2
+Simple to use Tab option for Angular2
 
 ## Example
 
