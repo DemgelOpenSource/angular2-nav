@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 5
+  - 4
+before_script:
+  - npm install -g typescript
+script:
+  - tsc -p .
+deploy:
+  provider: npm
+  api_key: NODE_API
+  on:
+    tags: true
