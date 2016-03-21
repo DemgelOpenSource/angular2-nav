@@ -1,6 +1,6 @@
 {
   "name": "angular2-tabs",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "description": "Tabs for angular2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
