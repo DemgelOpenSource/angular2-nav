@@ -3,7 +3,8 @@ import {AngularNavTabs} from "./tabs-component";
 
 @Directive({
     selector: "[anTab]",
-    inputs: ['anTab']
+    inputs: ['anTab'],
+    exportAs: 'anTab'
 })
 export class AngularNavTab {
     canActivate: Function = () => {return true;};
