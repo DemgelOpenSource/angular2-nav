@@ -22,7 +22,9 @@ export class TabListComponent {
     
     activateByTab(tab: AngularNavTab) {
         if (tab !== this.activeTab && tab.canActivate()) {
-            this.activeTab.deactivate();
+            if (this.activeTab) {
+                this.activeTab.deactivate();
+            }
             this.activeTab = tab;
             this.activeTab.activate();
         }
