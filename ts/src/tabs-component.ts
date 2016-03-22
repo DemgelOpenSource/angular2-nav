@@ -11,4 +11,8 @@ export class AngularNavTabs {
     
     constructor() {
     }
+    
+    activateTab(key: string) {
+        this.list.activateByKey(key);
+    }
 }

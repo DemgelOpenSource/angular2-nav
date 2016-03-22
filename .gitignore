@@ -4,4 +4,4 @@ typings
 *.js
 *.d.ts
 ./src/
-angular2-nav-*.tgz
+angular2-tabs-*.tgz

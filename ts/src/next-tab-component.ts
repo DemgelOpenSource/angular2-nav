@@ -1,16 +1,19 @@
-import {Directive, Input} from "angular2/core";
+import {Directive, Input, Host} from "angular2/core";
 import {AngularNavTab} from "./tab-directive";
+import {AngularNavTabs} from "./tabs-component";
 
 @Directive({
     selector: "[anNextTab]",
     host: {
-        "click": "onClick()"
+        "(click)": "onClick()"
     }
 })
 export class NextTab {
-    @Input("anNextTab") nextTab: AngularNavTab;
+    @Input("anNextTab") nextTab: string;
+    
+    constructor(@Host() private anTabs: AngularNavTabs) {}
     
     onClick() {
-        this.nextTab.anTabs.list.onClick(this.nextTab);
+        this.anTabs.activateTab(this.nextTab);
     }
 }

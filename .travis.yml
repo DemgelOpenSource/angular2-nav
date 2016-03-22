@@ -13,3 +13,5 @@ deploy:
   provider: npm
   api_key: c3c1a0cd-fdfc-405b-ae7b-24123a909aa2
   email: "tenowg@gmail.com"
+    on:
+      tags: true

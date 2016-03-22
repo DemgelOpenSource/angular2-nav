@@ -3,12 +3,12 @@ import {AngularNavTabs} from "./tabs-component";
 
 @Directive({
     selector: "[anTab]",
-    inputs: ['anTab'],
-    exportAs: 'anTab'
+    inputs: ['anTab']
 })
 export class AngularNavTab {
     canActivate: Function = () => {return true;};
-    an: string;
+    key: string;
+    title: string;
     anTabs: AngularNavTabs;
     active: boolean = false;
     
@@ -22,12 +22,23 @@ export class AngularNavTab {
     
     set anTab(value) {
         if (value !== null && typeof value === 'object') {
-            this.an = value.title;
+            if (value.title) {
+                this.title = value.title;
+            } else {
+                throw "Title is required if an Object is passed into AngularNavTab";
+            }
+            
             if (value.canActivate) {
                 this.canActivate = value.canActivate;
             }
+            if (value.id) {
+                this.key = value.id;
+            } else {
+                this.key = value.title;
+            }
         } else {
-            this.an = value;
+            this.title = value;
+            this.key = value;
         }
     }
     
@@ -57,7 +68,7 @@ export class AngularNavTabDefault extends AngularNavTab {
     
     ngOnInit() {
         super.ngOnInit();
-        this.anTabs.list.onClick(this);
+        this.anTabs.list.activateByTab(this);
     }
     
     set anTabDefault(value) {
