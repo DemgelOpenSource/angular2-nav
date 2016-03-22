@@ -1,3 +1,4 @@
+[![Join the chat at https://gitter.im/DemgelOpenSource/Home](https://badges.gitter.im/DemgelOpenSource/Home.svg)](https://gitter.im/DemgelOpenSource/Home?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![npm version](https://badge.fury.io/js/angular2-tabs.svg)](https://badge.fury.io/js/angular2-tabs)
 [![Build Status](https://travis-ci.org/DemgelOpenSource/angular2-tabs.svg?branch=master)](https://travis-ci.org/DemgelOpenSource/angular2-tabs)
 # Angular2-Tabs
