@@ -5,6 +5,14 @@
 
 Simple to use Tab option for Angular2
 
+## Installation
+
+Github only contains the source code for this project, to get the transpiled code for use in your project you will need to install it from npm.
+
+Simply use the following command:
+
+    npm install angular2-tabs --save
+
 ## Example
 
 ### Html
@@ -57,3 +65,12 @@ You will need to customize the list using your own CSS. The list will recieve ei
 These classes are added to the `li`.
 ### an-canactivate / an-cantactivate
 These classes are added to the `li` based on if the tab can be activated based on the `canActivate` function passed in.
+
+## Contributing
+
+To contribute, please fork this repository, then clone your repository. Once cloned feel free to make any changes you like.
+
+When you clone the repository, you will only recieve the Typescript files, typings and tsconfig. There is no testing included, as this is pretty simple.
+
+## Thanks
+A Special thanks to those at `Angular2` for creating angular2.
