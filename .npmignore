@@ -4,4 +4,4 @@ ts/
 tsconfig.json
 typings.json
 .npmignore
-angular2-nav-*.tgz
+angular2-tabs-*.tgz

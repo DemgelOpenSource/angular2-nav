@@ -8,7 +8,7 @@ import {AngularNavTab} from "./tab-directive";
                   <li class="an-tablistitem" [ngClass]="{'an-active': tab.active, 'an-inactive': !tab.active, 'an-canactivate': tab.canActivate(), 'an-cantactivate': !tab.canActivate()}" *ngFor="#tab of tabs" (click)="onClick(tab)">
                      {{tab.title}}
                   </li>
-              <ul>`,
+              </ul>`,
     exportAs: "anTabList"
 })
 export class TabListComponent {
