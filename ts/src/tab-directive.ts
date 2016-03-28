@@ -1,5 +1,6 @@
 import {Directive, TemplateRef, ViewContainerRef, Input, ViewChildren, QueryList, Host} from "angular2/core";
 import {AngularNavTabs} from "./tabs-component";
+import {TabInterface} from "../core";
 
 @Directive({
     selector: "[anTab]",
@@ -20,8 +21,8 @@ export class AngularNavTab {
         this.anTabs.list.tabs.push(this);
     }
     
-    set anTab(value) {
-        if (value !== null && typeof value === 'object') {
+    set anTab(value: TabInterface | string) {
+        if (typeof value === 'object') {
             if (value.title) {
                 this.title = value.title;
             } else {

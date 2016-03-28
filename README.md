@@ -25,24 +25,20 @@ Simply use the following command:
     </div>
     <div *anTab="'hello'">
         The Contents of Tab Two
-        <div [anNextTab]="tabOne.id">Next</div>
+        <div [anNextTab]="tabOne">Next</div>
     </div>
 </an-tabs>
 ```
 ### Controller
 ``` ts
-import {AngularNavTabs, AngularNavTab, AngularNavTabDefault, TabListComponent, NextTab} from 'angular2-nav/tabs';
+import {ANGULAR_TABS_DIRECTIVES, TabInterface} from "angular2-tabs/core";
 
 @Component({
     ...
-    directives: [AngularNavTabs,
-                 AngularNavTab,
-                 TabListComponent,
-                 AngularNavTabDefault,
-                 NextTab]
+    directives: [ANGULAR_TABS_DIRECTIVES]
 })
 export class IndexComponent {
-    tabOne = {id: "test", title: 'test Title', canActivate: () => {return true;}}
+    tabOne: TabInterface = {id: "test", title: 'test Title', canActivate: () => {return true;}}
 }
 ```
 ### Explanation (html)
@@ -55,15 +51,17 @@ A Template that contains the html that will be displayed when this tab is open.
 #### anTabDefault
 The default tab to be displayed. The last default tab that can be displayed (using canActivate) will be displayed when the tabs are loaded.
 #### anNextTab
-Directive to allow a "next" button to a Tab, must be placed within a tab. Takes in a parameter of the ID of the tab to load, OR title if a string was used to name the tab.
+Directive to allow a "next" button to a Tab, must be placed within a tab. Takes either the id name as a string, or takes the `TabInterface` object used to create the Tab.
 ### Explanation (Controller)
 #### Tab Object
 In this case `tabOne` is used to be pass information to the first tab. Property `title` is the title of the tab, and will be displayed in the tabList. The `canActivate` property is a function used to determine if a tab can be displayed.
 ## CSS
 You will need to customize the list using your own CSS. The list will recieve either `an-tablist` or a custom class name defined with `anListClass`.
 ### an-active / an-inactive
+(added to Tab-list only only)
 These classes are added to the `li`.
 ### an-canactivate / an-cantactivate
+(added to both Tab-list and anNextTab tags) 
 These classes are added to the `li` based on if the tab can be activated based on the `canActivate` function passed in.
 
 ## Contributing
