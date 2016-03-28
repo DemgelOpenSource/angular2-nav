@@ -25,7 +25,7 @@ Simply use the following command:
     </div>
     <div *anTab="'hello'">
         The Contents of Tab Two
-        <div [anNextTab]="tabOne">Next</div>
+        <div [anNextTab]="tabOne"></div>
     </div>
 </an-tabs>
 ```
